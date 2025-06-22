@@ -1,0 +1,16 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "recommend_sample_app",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "recommend_sample_app (Flutter)",
+            "cwd": "packages/flutter_app",
+            "request": "launch",
+            "type": "dart"
+        }
+    ]
+}

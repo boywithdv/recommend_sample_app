@@ -1,0 +1,38 @@
+name: flutter_template
+
+packages:
+  - packages/**
+
+scripts:
+  test:
+    run: melos exec -c 1 -- "flutter test"
+    description: Run Flutter tests for all packages.
+
+  gen:
+    run: melos exec -- "dart run build_runner build --delete-conflicting-outputs"
+    description: Generate code for all packages.
+    packageFilters:
+      dependsOn: "build_runner"
+
+  gen:watch:
+    run: melos exec -- "dart run build_runner watch --delete-conflicting-outputs"
+    description: Watch and generate code for all packages.
+    packageFilters:
+      dependsOn: "build_runner"
+
+  analyze:
+    run: melos exec -- "flutter analyze"
+    description: Run Flutter analyzer for all packages.
+
+  format:
+    run: melos exec -- "dart format ."
+    description: Format Dart code for all packages.
+
+  clean:
+    run: melos exec -- "flutter clean"
+    description: Clean all packages.
+
+  get:
+    run: melos exec -- "flutter pub get"
+    description: Get dependencies for all packages.
+
