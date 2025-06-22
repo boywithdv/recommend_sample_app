@@ -4,13 +4,23 @@
         {
             "name": "recommend_sample_app",
             "request": "launch",
-            "type": "dart"
+            "type": "dart",
+            "flutterMode": "debug",
+            "program": "lib/main.dart",
+            "cwd": "packages/flutter_app",
+            "args": [
+                "--dart-define=FLUTTER_WEB_USE_SKIA=true",
+                "--dart-define=FLUTTER_WEB_USE_SKIA=true",
+                "--dart-define=FLUTTER_WEB_USE_SKIA=true"
+            ]
         },
         {
             "name": "recommend_sample_app (Flutter)",
             "cwd": "packages/flutter_app",
             "request": "launch",
-            "type": "dart"
+            "type": "dart",
+            "flutterMode": "debug",
+            "program": "lib/main.dart",
         }
     ]
 }
